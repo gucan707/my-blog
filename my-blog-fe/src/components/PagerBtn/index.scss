@@ -1,0 +1,25 @@
+.pager-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+
+  &.current {
+    border-color: var(--color-blue) var(--color-blue) var(--color-pink)
+      var(--color-pink);
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 1.1rem;
+  }
+}

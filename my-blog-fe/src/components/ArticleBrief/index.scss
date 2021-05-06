@@ -1,0 +1,53 @@
+.article-brief {
+  box-sizing: border-box;
+  width: 30rem;
+  background-color: var(--color-black);
+  border: 3px solid;
+  border-color: var(--color-blue) var(--color-blue) var(--color-pink)
+    var(--color-pink);
+  border-radius: 6px;
+  padding: 0 2rem;
+
+  .title {
+    display: inline-block;
+    white-space: nowrap;
+    border-bottom: 1px solid white;
+    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .brief {
+    // font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  .foot {
+    border-top: 1px solid white;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .modify-time {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .tags {
+    white-space: nowrap;
+
+    .tag {
+      margin: 0 0.2rem;
+      border-color: var(--color-pink) var(--color-pink) var(--color-blue)
+        var(--color-blue);
+    }
+  }
+}

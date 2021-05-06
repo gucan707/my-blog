@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import Tag from './components/Tag/index';
+import ArticleBrief, { ArticleBriefProp } from './components/ArticleBrief'
+import PagerBtn, { PagerBtnProp } from './components/PagerBtn'
+import Bubble from './components/Bubble';
+
 function App() {
+  // const articleProp:ArticleBriefProp = {
+  //   title: "CSS世界笔记",
+  //   brief: "css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记css世界笔记",
+  //   modifyTime: Date.now(),
+  //   tagNames:['CSS','笔记']
+  // }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <ArticleBrief {...articleProp}/> */}
+      {/* <PagerBtn content='left' current={1}/>
+      <PagerBtn content={1} current={1}/>
+      <PagerBtn content='right' current={1}/> */}
+      <Bubble color='blue'/>
     </div>
   );
 }
