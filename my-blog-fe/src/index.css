@@ -4,7 +4,8 @@ body {
   --color-black:#1f1d26e8;
   background-color:var(--color-black);
   color: white;
-  margin: 100px;
+  margin:auto;
+  max-width: 900px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

@@ -1,15 +1,25 @@
-import './index.scss';
+import { useState, useEffect, memo } from "react";
 
-interface BubbleProp{
+import "./index.scss";
+
+interface BubbleProp {
   color: string;
+  update: object;
 }
 
-export default function Bubble(prop: BubbleProp) {
+export default memo(Bubble);
+function Bubble(prop: BubbleProp) {
   const { color } = prop;
   return (
-    <div className={color==='pink'?'bubble':'bubble blue'}>
-      <div className='light'></div>
-      <div className='inside'></div>
+    <div
+      className={color === "pink" ? "bubble" : "bubble blue"}
+      style={{
+        left: `${(Math.random() - 0.05) * 100}vw`,
+        top: `${(Math.random() - 0.05) * 100}vh`,
+      }}
+    >
+      <div className="light"></div>
+      <div className="inside"></div>
     </div>
-  )
+  );
 }

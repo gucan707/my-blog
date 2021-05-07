@@ -1,0 +1,39 @@
+.home {
+  header {
+    text-align: center;
+    border-bottom: 2px solid white;
+  }
+
+  .home-content {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  .left-content {
+    width: 75%;
+    border-right: 2px solid white;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .article-brief {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .right-content {
+    width: 25%;
+    padding: 1rem 0 0 1rem;
+
+    .all-tags {
+      border-bottom: 2px solid white;
+      min-height: 10rem;
+      padding-bottom: 0.5rem;
+      .tag {
+        margin: 0.5rem 0.5rem 0 0;
+      }
+    }
+  }
+}
