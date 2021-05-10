@@ -1,42 +1,26 @@
-import React, { useState } from "react";
-import MarkDown from "react-markdown";
-import CodeBlock from "../CodeBlock";
+import { useState, useEffect } from "react";
+import MarkdownIt from "markdown-it";
+import MdEditor from "react-markdown-editor-lite";
+// 导入编辑器的样式
+import "react-markdown-editor-lite/lib/index.css";
 
-export default function MdEdit() {
-  const [content, setContent] = useState("");
+import "./index.scss";
+
+const mdParser = new MarkdownIt(/* Markdown-it options */);
+
+interface MdEditProp {
+  setContent: (content: string) => void;
+}
+
+export default function MdEdit(prop: MdEditProp) {
+  const { setContent } = prop;
   return (
     <div>
-      <textarea onChange={(e) => setContent(e.currentTarget.value)}></textarea>
-      <MarkDown
-        className="result"
-        components={{
-          code: ({ node, ...p }) => <CodeBlock {...p} />,
-        }}
-        children={content}
+      <MdEditor
+        style={{ height: "500px" }}
+        renderHTML={(text) => mdParser.render(text)}
+        onChange={(data) => setContent(data.text)}
       />
     </div>
   );
 }
-
-// class Editor extends Component{
-//   constructor(props){
-//       super(props);
-//       this.state={
-//           content:""
-//       }
-//   }
-//   onChange = (e) => {
-//       this.setState({
-//           content:e.currentTarget.value
-//       })
-//   };
-//   render() {
-//       return(
-//           <div className="result-pane">
-//               <textarea onChange={this.onChange}/>
-//               <MarkDown className="result" source={this.state.content} renderers={{code:CodeBlock}}/>
-//           </div>
-//       )
-//   }
-// }
-// export default Editor;

@@ -1,0 +1,44 @@
+.md-presentation {
+  h1 {
+    color: wheat;
+  }
+
+  h2 {
+    color: #fad38b;
+  }
+
+  h3,
+  h4,
+  h5 {
+    color: #e3b25a;
+  }
+
+  blockquote {
+    p {
+      border-left: 5px gray solid;
+      padding: 1rem 0;
+      padding-left: 1rem;
+      background-image: linear-gradient(
+        to right,
+        var(--color-black),
+        transparent
+      );
+    }
+  }
+
+  li {
+    padding: 2px;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+    display: inline !important;
+    padding: 1px !important;
+  }
+
+  pre > code {
+    display: block !important;
+    padding: 8px !important;
+  }
+}

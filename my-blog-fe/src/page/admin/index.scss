@@ -1,0 +1,71 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .all-tags {
+    .tag {
+      margin: 0.5rem 0.5rem 0 0;
+      border-color: var(--color-pink);
+    }
+
+    .add-btn {
+      .tag {
+        border-color: var(--color-blue) var(--color-blue) var(--color-pink)
+          var(--color-pink);
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .btn {
+    margin: 2rem auto;
+    border-color: var(--color-blue) var(--color-blue) var(--color-pink)
+      var(--color-pink);
+  }
+
+  .tag-add {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.hidden {
+      display: none;
+    }
+
+    .container {
+      min-width: 20rem;
+
+      background-color: #fff;
+      width: 40%;
+      height: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+
+      input {
+        width: 70%;
+        height: 20%;
+        border-radius: 1rem;
+        margin-top: 10%;
+        outline: none;
+        font-size: 1.1rem;
+      }
+
+      .btns {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

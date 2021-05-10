@@ -7,6 +7,7 @@ import PagerBtn, { PagerBtnProp } from "./components/PagerBtn";
 import Bubble from "./components/Bubble";
 import Home from "./page/home";
 import Article from "./page/article";
+import Admin from "./page/admin";
 
 function App() {
   // const articleProp:ArticleBriefProp = {
@@ -23,8 +24,9 @@ function App() {
       <PagerBtn content={1} current={1}/>
       <PagerBtn content='right' current={1}/> */}
       {/* <Bubble color='blue'/> */}
-      {/* <Home /> */}
-      <Article />
+      <Home />
+      {/* <Admin /> */}
+      {/* <Article></Article> */}
     </div>
   );
 }

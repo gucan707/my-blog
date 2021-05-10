@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import ArticleBrief, { ArticleBriefProp } from "../../components/ArticleBrief";
 import Tag from "../../components/Tag";
 import Bubble from "../../components/Bubble";
+import MdPresentation from "../../components/MdPresentation";
+
+import { mdArticle } from "../../data/md";
 
 import "./index.scss";
 
@@ -32,16 +35,18 @@ export default function Home() {
       </header>
       <div className="home-content">
         <div className="left-content">
+          <MdPresentation content={mdArticle} />
+
+          {/* <ArticleBrief {...articleProp} />
           <ArticleBrief {...articleProp} />
-          <ArticleBrief {...articleProp} />
-          <ArticleBrief {...articleProp} />
+          <ArticleBrief {...articleProp} /> */}
         </div>
         <div className="right-content">
           <div className="all-tags">
             <span>标签</span>
             <div>
-              {tagNames.map((tagName) => (
-                <Tag content={tagName} isActive={false} />
+              {tagNames.map((tagName, index) => (
+                <Tag content={tagName} isActive={false} key={index} />
               ))}
             </div>
           </div>
